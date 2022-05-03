@@ -5,27 +5,61 @@
    Description: Switch and servo program
 */
 
-#include<Servo.h>;
+#include<Servo.h>
+
+//CONSTANTS
+const int stagePin = 8;
+const int fionaPin = 7;
+const int donkeyPin = 5;
+const int shrekPin = 4;
+const int farqPin = 3;
 
 //VARIABLES
-Servo myServo;
-const int buttonPin = 7;
+Servo stageServo;
+Servo fionaServo;
+//int pos;
 
 
 void setup() {
   // put your setup code here, to run once:
-  myServo.attach(9);
-  pinMode(buttonPin, INPUT);
+  stageServo.attach(stagePin);
+  fionaServo.attach(fionaServo);
+  Serial.begin(9600);
+  stageServo.write(0);
+  fionaServo.write(0);
 
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
   // if button is pressed, swivel servo 180 degrees
-  if (digitalRead(buttonPin) == HIGH) {
-    myServo.write(180);
+  if (Pin == HIGH && Pin == HIGH) {
+    stageServo.write();
+    fionaServo.write();
+  } else if (Pin = HIGH && Pin == HIGH) {
+    stageServo.write();
+    fionaServo.write();
+  } else if (Pin == HIGH && Pin == HIGH && Pin == HIGH) {
+    stageServo.write();
+    fionaServo.write();
+  } else if (Pin == HIGH && Pin == HIGH && Pin == HIGH && Pin == HIGH) {
+    stageServo.write();
+    fionaServo.write();
   } else {
-    myServo.write(0);
+    stageServo.write(0);
+    fionaServo.write(0);
   }
-
 }
+
+v oid stageMove(int a) {
+  for (int i = stageServo.read; i != a; i += 5) {
+    stageServo.write(i);
+    delay(10);
+  }
+}
+
+/*
+  void stageRotate1{}{
+  stageServo.write(
+  }
+*/
